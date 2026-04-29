@@ -1636,7 +1636,7 @@ footer {
 
   // ===== FORM SUBMISSION =====
   // Replace with your actual backend URL
-  const API_URL = 'https://third-wheel.up.railway.app/api/register';
+  const API_URL = 'https://your-third-wheel-server.com/api/register';
 
   async function handleSignup() {
     const btn = document.getElementById('submitBtn');
@@ -1679,7 +1679,7 @@ footer {
     try {
       const res = await fetch(API_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-register-token': 'tw-reg-a7f3c29d84e1b56f' },
         body: JSON.stringify({
           name: firstName + ' ' + lastName,
           phone: formatPhone(phone, phoneCountry),
@@ -1705,7 +1705,7 @@ footer {
 
   // ===== QR CODE =====
   // Replace YOUR_WHATSAPP_NUMBER with your Twilio WhatsApp number
-  const WHATSAPP_NUMBER = '15559335848';
+  const WHATSAPP_NUMBER = '13253094671';
   const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Third%20Wheel!%20I%27d%20like%20to%20get%20started%20%F0%9F%AA%BA`;
 
   // Load QR code library and generate
